@@ -6,7 +6,7 @@ app.use(express.static('src'));
 app.get('/crunch', async (req, res) => {
     const word = req.query.word;
     
-    const response = await fetch(`http://10.34.144.180:8000/crunch?word=${encodeURIComponent(word)}`);
+    const response = await fetch(`http://localhost:8000/crunch?word=${encodeURIComponent(word)}`);
     const data = await response.json();
     res.json(data);
 });
