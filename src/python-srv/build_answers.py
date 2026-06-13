@@ -24,7 +24,7 @@ for word in words:
     if all(token.pos_ in allowed_pos for token in doc):
         approved.append(word)
 
-with open("answers_filtered.text", "w") as f:
+with open("answers_filtered.txt", "w") as f:
     for word in approved:
         f.write(word + "\n")
 

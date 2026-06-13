@@ -8,7 +8,7 @@ model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 print("Loading answers...")
 
-with open("answers_filtered.text") as f:
+with open("answers_filtered.txt") as f:
     answers = [line.strip() for line in f if line.strip()]
 
 print(f"Loaded {len(answers)} answers")
