@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('src'));
 
 app.get('/crunch', async (req, res) => {
-    const response = await fetch('http://10.34.144.180:8000/crunch?word1=ocean&word2=water');
+    const response = await fetch('http://10.34.144.180:8000/crunch?word=water');
 
     const data = await response.json();
     res.json(data);

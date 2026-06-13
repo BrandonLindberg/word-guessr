@@ -17,14 +17,15 @@ embeddings = np.load("embeddings.npy")
 
 target_index = random.randint(0, len(answers) - 1)
 target_word = answers[target_index]
+target_embedding = model.encode(target_word)
 
 print (f"Target word: {target_word}")
 
 @app.get("/crunch")
-def crunch(word1: str, word2: str):
-    emb1 = embeddings(word1, convert_to_tensor=True)
-    emb2 = model.encode(word2, convert_to_tensor=True)
+def crunch(word: str):
 
-    score = float(cos_sim(emb1, emb2))
+    guess_embedding = model.encode(word)
+
+    score = float(cos_sim(target_embedding, guess_embedding))
 
     return {"score": score}
