@@ -6,23 +6,26 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Mulish', sans-serif;
-    background-color: grey;
+    background-color: #0B2027;
     min-height: 100dvh;
     margin: 0;
 }
 
 main {
     flex: 1;
+    color: white;
+    text-align: center;
 }
 
 header {
     font-family: 'Nunito', sans-serif;
     height: 75px;
+    color: white;
 }
 
 #game-holder {
-    border: 3px solid navy;
-    background-color: lightgrey;
+    border: 3px solid #2CF6B3;
+    background-color: #2B3A67;
     border-radius: 6px;
     min-height: 500px;
     min-width: 450px;
@@ -38,4 +41,24 @@ header {
     margin-top: 20px;
     border-radius: 10px;
     font-family: 'Mulish', sans-serif;
+}
+
+footer {
+    min-width: 100%;
+    display: flex;
+    gap: 10px;
+    background-color: #120309;
+    color: grey;
+    font-size: 14px;
+}
+
+.foot {
+    flex-grow: 1;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.foot2 {
+    flex-grow: 1;
+    padding-left: 20px;
 }
