@@ -7,7 +7,7 @@ async function buttonQuery() {
     
     if (!guess) return;
 
-    const response = await fetch(`http://10.34.144.180:8000/crunch?word=${guess}`);
+    const response = await fetch(`/crunch?word=${encodeURIComponent(guess)}`);
 
     input.value = '';
 
