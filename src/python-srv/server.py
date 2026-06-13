@@ -3,18 +3,19 @@ from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 
 from fastapi.middleware.cors import CORSMiddleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 import numpy as np
 import json
 import random
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
