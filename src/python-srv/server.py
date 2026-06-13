@@ -10,7 +10,7 @@ app = FastAPI()
 
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-with open("answers.json)") as f:
+with open("answers.json") as f:
     answers = json.load(f)
 
 embeddings = np.load("embeddings.npy")
