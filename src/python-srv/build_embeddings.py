@@ -21,4 +21,6 @@ print("Embeddings generated, saving...")
 with open("answers.json", "w") as f:
     json.dump(answers, f)
 
+np.save("embeddings.npy", embeddings)
+
 print(f"Generated {len(answers)} embeddings")
