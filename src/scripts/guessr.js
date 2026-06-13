@@ -22,27 +22,37 @@ async function buttonQuery() {
 };
 
 function queryResult(result, guess) {
-    const resultText = document.getElementById('result-num');
+    const resultText = document.getElementById('result-text');
     const resultNum = result;
 
-    if (resultNum <= 0.2){
+    if (resultNum <= 0.142){
         resultText.innerHTML = 'Freezing';
     }
 
-    else if (resultNum <= 0.4){
+    else if (resultNum <= 0.285){
         resultText.innerHTML = 'Cold';
     }
 
-    else if (resultNum <= 0.6){
-        resultText.innerHTML = 'Lukewarm';
+    else if (resultNum <= 0.428){
+        resultText.innerHTML = 'Cool';
     }
 
-    else if (resultNum <= 0.8){
+    else if (resultNum <= 0.571){
+        resultText.innerHTML = 'Balmy';
+    }
+
+    else if (resultNum < 0.714){
+        resultText.innerHTML = 'Warm';
+    }
+
+    else if (resultNum <= 0.856){
         resultText.innerHTML = 'Hot';
     }
+
     else if (resultNum < 0.99){
-        resultText.innerHTML = 'Burning Up';
+        resultText.innerHTML = 'Burning Up!';
     }
+
     else {
         resultText.innerHTML = `Correct! Word was: ${guess}`;
     }

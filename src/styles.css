@@ -70,3 +70,31 @@ footer {
     flex-grow: 1;
     padding-left: 20px;
 }
+
+.freezing {
+    color: darkblue;
+}
+
+.cold {
+    color: blue;
+}
+
+#cool {
+    color: cyan;
+}
+
+.balmy {
+    color: lightgreen;
+}
+
+.warm {
+    color: orange;
+}
+
+.hot {
+    color: red;
+}
+
+.burning-up {
+    color: darkred;
+}
