@@ -2,3 +2,4 @@
 node_modules
 /src/python-srv/*.json
 /src/python-srv/*.txt
+/src/python-srv/*.text
