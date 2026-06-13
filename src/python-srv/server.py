@@ -22,7 +22,7 @@ print (f"Target word: {target_word}")
 
 @app.get("/crunch")
 def crunch(word1: str, word2: str):
-    emb1 = model.encode(word1, convert_to_tensor=True)
+    emb1 = embeddings(word1, convert_to_tensor=True)
     emb2 = model.encode(word2, convert_to_tensor=True)
 
     score = float(cos_sim(emb1, emb2))
