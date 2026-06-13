@@ -1,5 +1,6 @@
 *.env
 *.npy
+*.sh
 node_modules
 /src/python-srv/*.json
 /src/python-srv/*.txt
