@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
 with open("answers.json") as f:
     answers = json.load(f)
