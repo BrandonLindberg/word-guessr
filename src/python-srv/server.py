@@ -26,7 +26,7 @@ embeddings = np.load("embeddings.npy")
 
 target_index = random.randint(0, len(answers) - 1)
 target_word = answers[target_index]
-target_embedding = model.encode(f'The concept of {target_word}')
+target_embedding = model.encode(f"The concept of {target_word}")
 
 print (f"Target word: {target_word}")
 
